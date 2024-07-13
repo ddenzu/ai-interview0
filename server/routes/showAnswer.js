@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { query } = require('../database.js');
+const { query } = require('../utils/database.js');
 
 router.post('/', async (req, res) => {
   try {

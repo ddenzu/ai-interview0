@@ -29,6 +29,6 @@ async function createCompletion(messages) {
     }
   
     return completion;
-  }
+}
   
-  module.exports = { createCompletion };
+module.exports = { createCompletion };

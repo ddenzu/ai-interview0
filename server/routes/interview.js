@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { createCompletion } = require('../openai.js');
+const { createCompletion } = require('../utils/openai.js');
 
 router.post('/', async (req, res) => {
     try {

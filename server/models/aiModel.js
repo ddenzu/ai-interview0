@@ -9,7 +9,6 @@ async function createCompletion(messages) {
     const maxRetries = 3;
     let retries = 0;
     let completion;
-  
     while (retries < maxRetries) {
       try {
         completion = await openai.chat.completions.create({
@@ -27,8 +26,7 @@ async function createCompletion(messages) {
         console.log(`Error fetching data, retrying (${retries}/${maxRetries})...`);
       }
     }
-  
     return completion;
 }
-  
+
 module.exports = { createCompletion };

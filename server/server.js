@@ -9,10 +9,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, 'build')));
 
-// 라우트 설정
+// routes
 app.use('/login', require('./routes/login'));
 app.use('/answer', require('./routes/answer'));
-app.use('/showAnswer', require('./routes/showAnswer'));
 app.use('/interview', require('./routes/interview'));
 
 app.listen(process.env.PORT, () => {
